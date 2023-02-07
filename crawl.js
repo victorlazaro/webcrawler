@@ -55,7 +55,7 @@ function getURLsFromHTML(htmlBody, baseURL) {
         } 
         try {
             const urlObj = new URL(completeHrefElement)
-            urls.push(completeHrefElement)
+            urls.push(urlObj.href)
         } catch(err) {
             console.log(`error with URL: ${err.message}`)
         }
